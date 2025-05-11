@@ -39,7 +39,7 @@ public class Kiraly {
 
     @Override
     public String toString() {
-        return ( nev + ", " + "szuletett: " + szuletett + ", meghalt: " + meghalt + ", elt=" + this.életkor() +
+        return ( nev + ", " + "szuletett: " + szuletett + ", meghalt: " + meghalt + ", elt: " + this.életkor() +
                 " evet" + ", a(z) " + haz + " tagja." );
     }
 }

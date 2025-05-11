@@ -2,6 +2,8 @@
 
 ## Rövid leírás
 
+Minimális JAVA verzió: JAVA 21.
+
 ## Eredeti feladatleírás
 
 1. feladat
@@ -49,6 +51,7 @@ A program kimenete a következő lehet:
 
 # Installálás
 
+Minimális JAVA verzió: JAVA 21.
 
 # Használat
 

@@ -2,6 +2,9 @@ package test;
 
 import model.Kiraly;
 
+/**
+ * A Kiraly osztály tesztelésére.
+ */
 public class testKiraly {
 
     public static void main(String[] args){

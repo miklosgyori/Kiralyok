@@ -1,0 +1,30 @@
+Szent Istvan,975,1038,Arpad-haz 
+Orseolo Peter,1010,1046,Orseolo-haz
+I. Andras,1015,1060,Arpad-haz
+I. Bela,1016,1063,Arpad-haz
+Salamon,1053,1087,Arpad-haz
+I. Geza,1040,1077,Arpad-haz
+I. Laszlo,1046,1095,Arpad-haz
+Konyves Kalman,1074,1116,Arpad-haz
+II. Istvan,1101,1131,Arpad-haz
+II. Bela,1110,1141,Arpad-haz
+II. Geza,1130,1162,Arpad-haz
+III. Bela,1148,1196,Arpad-haz
+Imre,1174,1204,Arpad-haz
+II. Andras,1177,1235,Arpad-haz
+IV. Bela,1206,1270,Arpad-haz
+V. Istvan,1239,1272,Arpad-haz
+IV. Laszlo,1262,1290,Arpad-haz
+III. Andras,1265,1301,Arpad-haz
+Karoly Robert,1288,1342,Anjou-haz
+I. (Nagy) Lajos,1326,1382,Anjou-haz
+Maria,1371,1395,Anjou-haz
+Zsigmond,1368,1437,Luxemburg-haz
+Albert,1397,1439,Habsburg-haz
+I. Ulaszlo,1424,1444,Jagello-haz
+V. Laszlo,1440,1457,Habsburg-haz
+Matyas kiraly,1443,1490,Hunyadi-haz
+II. Ulaszlo,1456,1516,Jagello-haz
+II. Lajos,1506,1526,Jagello-haz
+I. Ferdinand,1503,1564,Habsburg-haz
+II. Matyas,1557,1619,Habsburg-haz

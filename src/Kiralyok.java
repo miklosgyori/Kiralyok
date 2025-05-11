@@ -34,7 +34,6 @@ public class Kiralyok {
 
         List<Kiraly> kiralyLista = new ArrayList<>();
 
-        // TODO: karbantarthatosag miatt alabb a path lehetne osztalyszintu FINAL
         try (BufferedReader reader = new BufferedReader(new FileReader(PATH_TO_DATAFILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -63,9 +62,42 @@ public class Kiralyok {
         return kiralyLista;
     }
 
+    /**
+     * A leghosszabb eletu Kiraly kivalasztasa a kiralyListabol; maximumkereses.
+     * Mivel lehetseges, hogy egynel tobb talalat van, listat adunk vissza.
+     * @param kiralyLista ArrayList<Kiraly>, a Kiralyok teljes listaja
+     * @return legtovabbELtLista ArrayList<Kiraly>, a legtovabb elt Kiralyok listaja
+     */
+    private static List<Kiraly> legtovabbelt(List<Kiraly> kiralyLista) {
+
+        List<Kiraly> legtovabbELtLista = new ArrayList<>();
+
+        if ( !kiralyLista.isEmpty() ){
+
+            int maxKor = 0;
+            for (Kiraly kiraly : kiralyLista) {
+                int kor = kiraly.életkor();
+                if (kor > maxKor) {
+                    legtovabbELtLista.clear();
+                    legtovabbELtLista.add(kiraly);
+                    maxKor = kor;
+                } else if (kor == maxKor) {
+                    legtovabbELtLista.add(kiraly);
+                }
+            }
+        } else {
+         System.err.println("Nem tudok legtovabb elt kiralyt keresni, mert ures a lista!");
+        }
+        return legtovabbELtLista;
+    }
+
     public static void main (String[]args) {
 
         Kiralyok kiralyok = new Kiralyok();
 
+        System.out.println("\n1. feladat:\nA legtovabb elt kiraly(ok) a teljes listabol:");
+        for ( Kiraly kiraly : legtovabbelt(kiralyLista) ) {
+            System.out.println(kiraly.toString());
+        }
     }
 }

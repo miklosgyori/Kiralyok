@@ -14,25 +14,28 @@ public class Kiralyok {
     /**
      * A file-ból betöltött királyok (Kiraly objektumok) listája.
      */
+
+    private static final String PATH_TO_DATAFILE = "data/kiralyok.txt";
     private static List<Kiraly> kiralyLista;
+
 
     /**
      * A konstuktor hivasaval az adatbetoltes is megtortenik
      */
     public Kiralyok() {
-        this.kiralyLista = betolt("data/kiralyok.txt");
+        this.kiralyLista = betolt();
     }
 
     /**
-     * A kiralyok listajanak ellenorzott betoltese a parameterkent megadott UTF-8 filebol.
-     * @param fajlPathNev A bemeneti adatfile elerese a projektmappahoz viszonyitva
+     * A kiralyok listajanak ellenorzott betoltese a parameterkent megadott UTF-8 filebol.     *
      * @return kiralyLista A beolvasott kiralyokat tartalmazo ArrayList<Kiraly>
      */
-    private static List<Kiraly> betolt(String fajlPathNev) {
+    private static List<Kiraly> betolt() {
 
         List<Kiraly> kiralyLista = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(fajlPathNev))) {
+        // TODO: karbantarthatosag miatt alabb a path lehetne osztalyszintu FINAL
+        try (BufferedReader reader = new BufferedReader(new FileReader(PATH_TO_DATAFILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");

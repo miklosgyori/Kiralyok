@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 
 /**
  * Az applikáció logikáját definiáló osztály.
@@ -91,20 +92,20 @@ public class Kiralyok {
     }
 
     /**
-     * Megszamolja a String parameterben megadott hazba tartozo kiralyokat.
+     * Megszamolja az egyes hazakba tartozo kiralyokat.
      * @param kiralyLista ArrayList<Kiraly>, a Kiralyok teljes listaja
-     * @param hazNev String, a megszamolando haz neve
-     * @return szam int, a megszamolando hazba tratozo kiralyok szama a listaban
+     * @return hazakMap TreeMap<String, Integer>
      */
-    private static int szamolHaz(List<Kiraly> kiralyLista, String hazNev){
-        int szam = 0;
+    private static TreeMap<String, Integer> szamolHazak(List<Kiraly> kiralyLista){
+        TreeMap<String, Integer> hazakMap = new TreeMap<>();
         for (Kiraly kiraly : kiralyLista){
-            if ( kiraly.getHaz().equals(hazNev) )
-            {
-                szam += 1;
+            if (  hazakMap.containsKey(kiraly.getHaz()) ) {
+                hazakMap.put(kiraly.getHaz(), hazakMap.get(kiraly.getHaz()) + 1);
+            } else {
+                hazakMap.put(kiraly.getHaz(), 1);
             }
         }
-        return szam;
+        return hazakMap;
     }
 
     public static void main (String[]args) {
@@ -112,12 +113,22 @@ public class Kiralyok {
         Kiralyok kiralyok = new Kiralyok();
 
         System.out.println("\n1. feladat:\nA legtovabb elt kiraly(ok) a teljes listabol:");
-        for ( Kiraly kiraly : legtovabbelt(kiralyLista) ) {
+        for (Kiraly kiraly : legtovabbelt(kiralyLista)) {
             System.out.println(kiraly.toString());
         }
 
-        System.out.println("\n2. feladat:\nAz Arpad-hazi kiraly szama a teljes listabol: " + szamolHaz(kiralyLista, "Arpad-haz") );
+        TreeMap<String, Integer> hazakMap = szamolHazak(kiralyLista);
 
+        System.out.println("\n2. feladat:\nAz Arpad-hazi uralkodok szama: " + hazakMap.get("Arpad-haz") + " fo");
 
+        System.out.println("\n3. feladat:\nA kiralyi hazak listaja:");
+        for (var entry : hazakMap.entrySet()) {
+            System.out.println(entry.getKey());
+        }
+
+        System.out.println("\n4. feladat:\nA kiralyi hazak listaja, az uralkodok szamaval:");
+        for (var entry : hazakMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue() + " fo");
+        }
     }
 }

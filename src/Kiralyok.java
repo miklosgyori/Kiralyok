@@ -28,7 +28,7 @@ public class Kiralyok {
 
     /**
      * A kiralyok listajanak ellenorzott betoltese a parameterkent megadott UTF-8 filebol.     *
-     * @return kiralyLista A beolvasott kiralyokat tartalmazo ArrayList<Kiraly>
+     * @return kiralyLista A beolvasott kiralyokat tartalmazo ArrayList
      */
     private static List<Kiraly> betolt() {
 
@@ -65,8 +65,8 @@ public class Kiralyok {
     /**
      * A leghosszabb eletu Kiraly kivalasztasa a kiralyListabol; maximumkereses.
      * Mivel lehetseges, hogy egynel tobb talalat van, listat adunk vissza.
-     * @param kiralyLista ArrayList<Kiraly>, a Kiralyok teljes listaja
-     * @return legtovabbELtLista ArrayList<Kiraly>, a legtovabb elt Kiralyok listaja
+     * @param kiralyLista ArrayList, a Kiralyok teljes listaja
+     * @return legtovabbELtLista ArrayList, a legtovabb elt Kiralyok listaja
      */
     private static List<Kiraly> legtovabbelt(List<Kiraly> kiralyLista) {
 
@@ -93,8 +93,8 @@ public class Kiralyok {
 
     /**
      * Megszamolja az egyes hazakba tartozo kiralyokat.
-     * @param kiralyLista ArrayList<Kiraly>, a Kiralyok teljes listaja
-     * @return hazakMap TreeMap<String, Integer>
+     * @param kiralyLista ArrayList, a Kiralyok teljes listaja
+     * @return hazakMap TreeMap
      */
     private static TreeMap<String, Integer> szamolHazak(List<Kiraly> kiralyLista){
         TreeMap<String, Integer> hazakMap = new TreeMap<>();
@@ -108,6 +108,7 @@ public class Kiralyok {
         return hazakMap;
     }
 
+    // TODO: javadoc ehhez + javadoc veglegesitese
     public static void main (String[]args) {
 
         Kiralyok kiralyok = new Kiralyok();

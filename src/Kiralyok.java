@@ -90,6 +90,23 @@ public class Kiralyok {
         return legtovabbELtLista;
     }
 
+    /**
+     * Megszamolja a String parameterben megadott hazba tartozo kiralyokat.
+     * @param kiralyLista ArrayList<Kiraly>, a Kiralyok teljes listaja
+     * @param hazNev String, a megszamolando haz neve
+     * @return szam int, a megszamolando hazba tratozo kiralyok szama a listaban
+     */
+    private static int szamolHaz(List<Kiraly> kiralyLista, String hazNev){
+        int szam = 0;
+        for (Kiraly kiraly : kiralyLista){
+            if ( kiraly.getHaz().equals(hazNev) )
+            {
+                szam += 1;
+            }
+        }
+        return szam;
+    }
+
     public static void main (String[]args) {
 
         Kiralyok kiralyok = new Kiralyok();
@@ -98,5 +115,9 @@ public class Kiralyok {
         for ( Kiraly kiraly : legtovabbelt(kiralyLista) ) {
             System.out.println(kiraly.toString());
         }
+
+        System.out.println("\n2. feladat:\nAz Arpad-hazi kiraly szama a teljes listabol: " + szamolHaz(kiralyLista, "Arpad-haz") );
+
+
     }
 }

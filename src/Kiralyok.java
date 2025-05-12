@@ -11,11 +11,10 @@ import java.util.List;
  */
 public class Kiralyok {
 
+    private static final String PATH_TO_DATAFILE = "data/kiralyok.txt";
     /**
      * A file-ból betöltött királyok (Kiraly objektumok) listája.
      */
-
-    private static final String PATH_TO_DATAFILE = "data/kiralyok.txt";
     private static List<Kiraly> kiralyLista;
 
 

@@ -2,11 +2,13 @@
 
 ## Rövid leírás
 
+"Kiralyok" konzolos alkalmazás.
 Minimális JAVA verzió: JAVA 21.
+Nem igényel felhasználói interakciót, az alábbi feladatleírásban megadott funkciókat implementálja.
 
 ## Eredeti feladatleírás
 
-1. feladat
+A feladat
 
 Készíts Java programot Kiralyok.java néven, ami magyar királyok adatait dolgozza fel. Az adatokat a kiralyok.txt
 állomány tartalmazza. Minden sor egy magyar király nevét születési évét, halálának évét és azt tartalmazza, hogy melyik
@@ -55,8 +57,8 @@ Minimális JAVA verzió: JAVA 21.
 
 # Használat
 
-
-# Funkciók
-
+Konzolrol futtatandó, kimenetet a konzolra írja.
 
 # Ismert korlátok
+
+Limitált input file ellenőrzés, limitált hibakezelés.

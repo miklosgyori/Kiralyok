@@ -108,11 +108,15 @@ public class Kiralyok {
         return hazakMap;
     }
 
-    // TODO: javadoc ehhez + javadoc veglegesitese
+    /**
+     * Main metodus, az alapfunkciokat hivja.
+     * @param args nem hasznalunk command line arguymentumokat
+     */
     public static void main (String[]args) {
 
         Kiralyok kiralyok = new Kiralyok();
 
+        // 1. feladat
         System.out.println("\n1. feladat:\nA legtovabb elt kiraly(ok) a teljes listabol:");
         for (Kiraly kiraly : legtovabbelt(kiralyLista)) {
             System.out.println(kiraly.toString());
@@ -120,13 +124,16 @@ public class Kiralyok {
 
         TreeMap<String, Integer> hazakMap = szamolHazak(kiralyLista);
 
+        // 2. feladat
         System.out.println("\n2. feladat:\nAz Arpad-hazi uralkodok szama: " + hazakMap.get("Arpad-haz") + " fo");
 
+        // 3. feladat
         System.out.println("\n3. feladat:\nA kiralyi hazak listaja:");
         for (var entry : hazakMap.entrySet()) {
             System.out.println(entry.getKey());
         }
 
+        // 4. feladat
         System.out.println("\n4. feladat:\nA kiralyi hazak listaja, az uralkodok szamaval:");
         for (var entry : hazakMap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue() + " fo");

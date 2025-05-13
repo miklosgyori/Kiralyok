@@ -3,7 +3,7 @@ package test;
 import model.Kiraly;
 
 /**
- * A Kiraly osztály tesztelésére.
+ * A Kiraly osztály egyszerű, gyors tesztelésére.
  */
 public class testKiraly {
 
